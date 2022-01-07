@@ -3,10 +3,11 @@ const movies = require("./data/movies.json");
 
 const getBooksandMovies = () => {
     return Promise.all([fetchBooks(), fetchMovies()])
-    .then(([books, movies]) => ({
-        books,movies
-    }))
-    .catch(error => console.log('Error fetching books and movies', error));
+    .then(([books, movies ]) => ({
+        books,
+        movies
+      }))
+    .catch(error => console.log("Error fetching books and movies", error));
 }
 
 const getBooksandMoviesPromise = getBooksandMovies();
